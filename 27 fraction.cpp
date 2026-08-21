@@ -43,6 +43,6 @@ int main()
    cout<<"Addition:";
    addition.display();
    cout<<"Substraction:";
-   substraction.display();
+   subtraction.display();
    return 0;
 }
