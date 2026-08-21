@@ -27,6 +27,6 @@ int main()
    cout<<"First Complex Number:",c1.display();
    cout<<"Second Complex Number:",c2.display();
    cout<<"Addition:",sum.display();
-   cout<<"Substraction :",diff.display();
+   cout<<"Subtraction :",diff.display();
    return 0;
 }
