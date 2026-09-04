@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+
+class Employee
+{
+    int id;
+    string name;
+    float salary;
+
+public:
+
+    // Default Constructor
+    Employee()
+    {
+        id = 0;
+        name = "Unknown";
+        salary = 0;
+    }
+
+    // Parameterized Constructor
+    Employee(int i, string n, float s)
+    {
+        id = i;
+        name = n;
+        salary = s;
+    }
+
+    // Copy Constructor
+    Employee(const Employee &e)
+    {
+        id = e.id;
+        name = e.name;
+        salary = e.salary;
+    }
+
+    // Display Function
+    void display()
+    {
+        cout << "ID: " << id << endl;
+        cout << "Name: " << name << endl;
+        cout << "Salary: " << salary << endl;
+    }
+};
+
+int main()
+{
+    Employee e1;                 // Default constructor
+    Employee e2(101, "Rahul", 50000); // Parameterized constructor
+    Employee e3(e2);             // Copy constructor
+
+    cout << "\nDefault Constructor:" << endl;
+    e1.display();
+
+    cout << "\nParameterized Constructor:" << endl;
+    e2.display();
+
+    cout << "\nCopy Constructor:" << endl;
+    e3.display();
+
+    return 0;
+}
