@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+class Product
+{
+    int id;
+    string name;
+    float price;
+    int quantity;
+
+public:
+
+    // Parameterized Constructor
+    Product(int i, string n, float p, int q)
+    {
+        id = i;
+        name = n;
+        price = p;
+        quantity = q;
+    }
+
+    void calculateTotalCost()
+    {
+        float totalCost = price * quantity;
+
+        cout << "\nProduct Details" << endl;
+        cout << "ID: " << id << endl;
+        cout << "Name: " << name << endl;
+        cout << "Price: " << price << endl;
+        cout << "Quantity: " << quantity << endl;
+        cout << "Total Cost: " << totalCost << endl;
+    }
+};
+
+int main()
+{
+    int id, quantity;
+    string name;
+    float price;
+
+    cout << "Enter Product ID: ";
+    cin >> id;
+
+    cout << "Enter Product Name: ";
+    cin >> name;
+
+    cout << "Enter Price: ";
+    cin >> price;
+
+    cout << "Enter Quantity: ";
+    cin >> quantity;
+
+    Product p(id, name, price, quantity);
+
+    p.calculateTotalCost();
+
+    return 0;
+}
