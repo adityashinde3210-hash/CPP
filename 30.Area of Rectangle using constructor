@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+class Rectangle
+{
+    float length, breadth;
+
+public:
+
+    // Parameterized Constructor
+    Rectangle(float l, float b)
+    {
+        length = l;
+        breadth = b;
+    }
+
+    void calculateArea()
+    {
+        float area = length * breadth;
+
+        cout << "Length: " << length << endl;
+        cout << "Breadth: " << breadth << endl;
+        cout << "Area of Rectangle: " << area << endl;
+    }
+};
+
+int main()
+{
+    float l, b;
+
+    cout << "Enter length: ";
+    cin >> l;
+
+    cout << "Enter breadth: ";
+    cin >> b;
+
+    Rectangle r(l, b);
+
+    r.calculateArea();
+
+    return 0;
+}
